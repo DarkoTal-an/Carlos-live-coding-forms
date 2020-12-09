@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: block;
+        margin-bottom: 0.35rem;
+      }
+
+      .form-field {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-control input {
+        font-size: 1.5em;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .form-control input:focus {
+        outline: 5px solid red;
+      }
+
+      .fruit-selector {
+        margin-bottom: 1.5rem;
+      }
+
+      .fruit-selector label {
+        display: inline-block;
+      }
+
+      .fruit-selector label:hover span {
+        background: red;
+        color: white;
+      }
+
+      .fruit-selector input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+        appearance: none;
+        position: absolute;
+      }
+
+      .fruit-selector input + span {
+        border: 1px solid black;
+        cursor: pointer;
+        display: inline-block;
+        padding: 0.5rem;
+      }
+
+      .fruit-selector input:checked + span {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <div class="fruit-selector">
+        <p>What's your favourite fruit?</p>
+
+        <label>
+          <input type="radio" name="fruit" value="pizza" />
+          <span>🌯</span>
+        </label>
+        <label>
+          <input type="radio" name="fruit" value="pizza" />
+          <span>🌯</span>
+        </label>
+        <label>
+          <input type="radio" name="fruit" value="pizza" />
+          <span>🍕</span>
+        </label>
+        <label>
+          <input type="radio" name="fruit" value="banana" />
+          <span>🍌</span>
+        </label>
+        <label>
+          <input type="radio" name="fruit" value="apple" /> <span>🍎</span>
+        </label>
+        <label>
+          <input type="radio" name="fruit" value="kiwi" /> <span>🥝</span>
+        </label>
+      </div>
+
+      <fieldset>
+        <legend>Personal information</legend>
+        <div class="form-field">
+          <label for="full-name">Full Name</label>
+          <div class="form-control">
+            <input id="full-name" type="text" name="full-name" />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <div class="form-control">
+            <input id="email" type="email" name="email" />
+          </div>
+        </div>
+      </fieldset>
+
+      <label for=""> <input type="checkbox" /> I accept </label>
+
+      <button type="submit">submit</button>
+      <!-- <input type="submit" value="button 2" /> -->
+    </form>
+  </body>
+</html>
